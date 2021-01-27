@@ -15,17 +15,20 @@
             <div class="form w-full">
                 <form id="addForm" class="group flex">
                     <input id="newTodo" type="text" class="group-focus:ring-2 group-focus:ring-gray-600 bg-gray-800 text-white flex-grow px-4 rounded-l-lg focus:ring-2 focus:ring-gray-600" placeholder="New Todo">
-                    <button class="bg-green-500 text-white py-2 px-4 rounded-r-lg hover:bg-green-700">Add</button>
+                    <button class="transition duration-300 ease-in-out bg-green-500 text-white py-2 px-4 rounded-r-lg hover:bg-green-700">Add</button>
                 </form>
+            </div>
+            <div id="nothingHere" class="visible my-4 text-white animate-bounce">
+                <h3>Type in tasks to get the list going!</h3>
             </div>
             <div id="todos" class="w-2/3 space-y-8 my-4">
                 <div>
-                    <h3 class="text-2xl text-indigo-800">Pending Items</h3>
+                    <h3 id="pendingItemsHeader" class="invisible text-2xl text-indigo-800">Pending Items</h3>
                     <ul id="pendingList"></ul>
                 </div>
                 <div>
                     <div>
-                    <h3 id="completedItemsHeader" class="text-2xl text-yellow-800 inline">Completed Items</h3>
+                    <h3 id="completedItemsHeader" class="invisible text-2xl text-yellow-800 inline">Completed Items</h3>
                     <button id="deleteButton" type="button" class="invisible inline bg-gray-500 text-white mx-4 py-0 px-4 rounded disabled:opacity-50 cursor-not-allowed">Delete</button>
                     </div>
                     <ul id="completedList" class></ul>
